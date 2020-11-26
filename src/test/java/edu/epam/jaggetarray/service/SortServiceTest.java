@@ -21,10 +21,11 @@ public class SortServiceTest {
                 {4, 2, 3, 3, 7},
                 {56}};
         int[][] jarray = array.getJaggedArray();
+        SumComparator sumComparator = new SumComparator();
         ChangeRowService swapper = new ChangeRowService();
         SumService sumService = new SumService();
         SortService sorter = new SortService();
-        sorter.sortInAscendingOrder(jarray, swapper, sumService);
+        sorter.sortInAscendingOrder(jarray, swapper, sumComparator);
         Assert.assertEquals(jarray,expected);
     }
 

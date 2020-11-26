@@ -26,29 +26,33 @@ public class Main {
         logger.log(Level.INFO, "JaggedArray:");
         report.printEvenReport(jarray);
 
+        MaxNumberComparator lComparator = new MaxNumberComparator();
+        MinNumberComparator sComparator = new MinNumberComparator();
+        SumComparator sumComparator = new SumComparator();
         SortService sorter = new SortService();
         logger.log(Level.INFO, "JaggedArray by sum:");
         logger.log(Level.INFO, "ascending order:");
-        sorter.sortInAscendingOrder(jarray, swapper, sumService);
+        sorter.sortInAscendingOrder(jarray, swapper, sumComparator);
         report.printEvenReport(jarray);
         logger.log(Level.INFO, "descending order:");
-        sorter.sortInDescendingOrder(jarray, swapper, sumService);
+        sorter.sortInDescendingOrder(jarray, swapper, sumComparator);
         report.printEvenReport(jarray);
 
         logger.log(Level.INFO, "JaggedArray by largest num:");
         logger.log(Level.INFO, "ascending order:");
-        sorter.sortInAscendingOrder(jarray, swapper, largestNumber);
+
+        sorter.sortInAscendingOrder(jarray, swapper, lComparator);
         report.printEvenReport(jarray);
         logger.log(Level.INFO, "descending order:");
-        sorter.sortInDescendingOrder(jarray, swapper, largestNumber);
+        sorter.sortInDescendingOrder(jarray, swapper, lComparator);
         report.printEvenReport(jarray);
 
         logger.log(Level.INFO, "JaggedArray by smaller num:");
         logger.log(Level.INFO, "ascending order:");
-        sorter.sortInAscendingOrder(jarray, swapper, smallestNumber);
+        sorter.sortInAscendingOrder(jarray, swapper, sComparator);
         report.printEvenReport(jarray);
         logger.log(Level.INFO, "descending order:");
-        sorter.sortInDescendingOrder(jarray, swapper, smallestNumber);
+        sorter.sortInDescendingOrder(jarray, swapper, sComparator);
         report.printEvenReport(jarray);
     }
 }
