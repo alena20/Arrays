@@ -1,6 +1,7 @@
 package edu.epam.array.main;
 
 import edu.epam.array.entity.ArrayTask;
+import edu.epam.array.reader.FillArray;
 import edu.epam.array.service.*;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;

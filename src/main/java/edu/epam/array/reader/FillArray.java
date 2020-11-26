@@ -1,5 +1,6 @@
-package edu.epam.array.service;
+package edu.epam.array.reader;
 
+import edu.epam.array.service.RandomArray;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
