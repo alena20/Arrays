@@ -8,8 +8,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class ArrayFromFile {
-    private static final Logger logger = LogManager.getLogger(ArrayFromFile.class);
+public class FillArray {
+    private static final Logger logger = LogManager.getLogger(FillArray.class);
 
     public int countIntegersInFile(String filePath) {
         int size = 0;
@@ -37,6 +37,12 @@ public class ArrayFromFile {
              logger.log(Level.ERROR, "File not found");
         }
         return fileArray;
+    }
+
+    public int[] filRandom(int size){
+        RandomArray rand = new RandomArray();
+        int [] randArray = rand.generateRandomNumbers(size);
+        return randArray;
     }
 
 }

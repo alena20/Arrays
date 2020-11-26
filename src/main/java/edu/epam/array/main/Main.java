@@ -11,17 +11,15 @@ public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
 
     public static void main(String [] args){
-        RandomArray rand = new RandomArray();
         ArrayTask array = new ArrayTask();
-        int [] randArray = rand.generateRandomNumbers(10);
-        array.setArray(randArray);
+        FillArray fill = new FillArray();
+        array.setArray(fill.filRandom(10));
         logger.log(Level.INFO, "Array random");
         action(array);
-
         ArrayTask arrayFromFile = new ArrayTask();
-        ArrayFromFile readFile = new ArrayFromFile();
-        readFile.countIntegersInFile(filePath);
-        arrayFromFile.setArray(readFile.getIntegersFromFile(filePath));
+
+        fill.countIntegersInFile(filePath);
+        arrayFromFile.setArray(fill.getIntegersFromFile(filePath));
         logger.log(Level.INFO, "Array from file");
         action(arrayFromFile);
     }
